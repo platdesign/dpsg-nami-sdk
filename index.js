@@ -23,7 +23,7 @@ const configSchema = Joi.object().keys({
 
 
 
-module.exports = class NamiRestClient {
+module.exports = class NamiSDK {
 
 
 
