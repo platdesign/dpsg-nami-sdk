@@ -1,0 +1,28 @@
+{
+  "name": "dpsg-nami-sdk",
+  "description": "Access NaMi-Api (German scout member management) via nodejs",
+  "author": [
+    {
+      "name": "Christian Blaschke",
+      "email": "mail@platdesign.de",
+      "url": "https://github.com/platdesign"
+    }
+  ],
+  "version": "0.0.0",
+  "dependencies": {
+    "hoek": "^4.1.0",
+    "joi": "^9.2.0",
+    "request": "^2.78.0"
+  },
+  "repository": "",
+  "devDependencies": {
+    "code": "^4.0.0",
+    "mocha": "^3.1.2"
+  },
+  "scripts":{
+    "test":"NODE_ENV=test mocha",
+    "test:unit":"NODE_ENV=test mocha -g unit",
+    "test:requests":"NODE_ENV=test mocha -g requests",
+    "test:watch":"NODE_ENV=test mocha -w"
+  }
+}
