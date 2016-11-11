@@ -8,6 +8,34 @@ Access NaMi-Api (German scout member management) via nodejs.
 [@platdesign](https://twitter.com/platdesign)
 
 
+# Basic Usage
+
+```js
+const NamiSdk = require('dpsg-nami-sdk');
+const client = new NamiSdk({
+	userId: 'api user id',
+	groupId: 'id of your group',
+	password: 'api user password',
+	production: false // default
+});
+
+client.getMembers().then((res) => {
+	expect(res)
+	  .to.be.an.object();
+		
+	expect(res.success)
+	  .to.be.a.boolean()
+	  .to.equal(true);
+		
+	expect(res.totalEntries)
+	  .to.be.a.number();
+		
+	expect(res.data)
+	  .to.be.an.array()
+	  .have.length(2);
+});
+```
+
 
 # Test
 - copy `config.default.json` to `config.test.json` and set your parameters.
