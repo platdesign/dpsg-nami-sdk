@@ -6,8 +6,9 @@ const NamiClient = require('../');
 const Joi = require('joi');
 
 
-
-const clientConfig = require('../config.test.json');
+if(!process.env.CODESHIP) {
+	const clientConfig = require('../config.test.json');
+}
 
 
 describe('NamiClient', () => {
