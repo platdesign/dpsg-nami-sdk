@@ -39,7 +39,6 @@ client.getMembers().then((res) => {
 
 # Test
 - copy `config.default.json` to `config.test.json` and set your parameters.
-- run `npm test`
-
-
-
+- run all tests: `npm test`
+- run unit tests only: `npm run test:unit`
+- run request tests only: `npm run test:requests`
