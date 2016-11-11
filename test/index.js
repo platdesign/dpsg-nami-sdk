@@ -5,9 +5,9 @@ const expect = Code.expect;
 const NamiClient = require('../');
 const Joi = require('joi');
 
-
+let clientConfig;
 if(!process.env.CODESHIP) {
-	const clientConfig = require('../config.test.json');
+	clientConfig = require('../config.test.json');
 }
 
 
