@@ -194,7 +194,7 @@ module.exports = class NamiSDK {
 	 * @param  {Number} memberId
 	 * @return {Promise}          resolves with data from _request result
 	 */
-	async getMemberDetails(memberId, query) {
+	getMemberDetails(memberId, query) {
 
 		let uri = this._extendBaseUrl(`/ica/rest/nami/zugeordnete-taetigkeiten/filtered-for-navigation/gruppierung-mitglied/mitglied/211605/flist`)
 
