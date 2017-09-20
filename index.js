@@ -190,11 +190,11 @@ module.exports = class NamiSDK {
 
 
 	/**
-	 * Request member details
+	 * Request member roles
 	 * @param  {Number} memberId
 	 * @return {Promise}          resolves with data from _request result
 	 */
-	getMemberDetails(memberId, query) {
+	getMemberRoles(memberId, query) {
 
 		let uri = this._extendBaseUrl(`/ica/rest/nami/zugeordnete-taetigkeiten/filtered-for-navigation/gruppierung-mitglied/mitglied/211605/flist`)
 
@@ -211,5 +211,27 @@ module.exports = class NamiSDK {
 	}
 
 
+
+	// TODO: Check why this req throws EXCEPTION
+	// /**
+	//  * Request member details
+	//  * @param  {Number} memberId
+	//  * @return {Promise}          resolves with data from _request result
+	//  */
+	// getMemberDetails(memberId) {
+
+	// 	let uri = this._extendBaseUrl(`/ica/rest/nami/mitglied/filtered-for-navigation/gruppierung/gruppierung/${this._config.groupId}/${memberId}`)
+	// 	console.log(uri);
+
+	// 	return this._request({
+	// 		method: 'GET',
+	// 		uri,
+	// 		qs: {
+	// 			_dc: Date.now()/1000
+	// 		}
+	// 	})
+	// 	.then((res) => res.data);
+
+	// }
 
 };

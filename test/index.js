@@ -186,12 +186,10 @@ describe('NamiClient', () => {
 			});
 
 
-			it('should get member-details', () => {
+			it('should get member-roles', () => {
 
-				return client.getMemberDetails(clientConfig.userId)
+				return client.getMemberRoles(clientConfig.userId)
 					.then(res => {
-
-						console.log(JSON.stringify(res, null, 2));
 
 						expect(res)
 							.to.be.an.object();
@@ -206,6 +204,28 @@ describe('NamiClient', () => {
 					});
 
 			});
+
+
+			// Disabled due to EXCEPTION problem with api
+			// it('should get member-details', () => {
+
+			// 	return client.getMemberDetails(clientConfig.userId)
+			// 		.then(res => {
+			// 			console.log(res);
+
+			// 			// expect(res)
+			// 			// 	.to.be.an.object();
+
+			// 			// expect(res.success)
+			// 			// 	.to.be.a.boolean()
+			// 			// 	.to.equal(true);
+
+			// 			// expect(res.totalEntries)
+			// 			// 	.to.be.a.number();
+
+			// 		});
+
+			// });
 
 		});
 
