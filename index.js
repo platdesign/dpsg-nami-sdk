@@ -196,7 +196,7 @@ module.exports = class NamiSDK {
 	 */
 	getMemberRoles(memberId, query) {
 
-		let uri = this._extendBaseUrl(`/ica/rest/nami/zugeordnete-taetigkeiten/filtered-for-navigation/gruppierung-mitglied/mitglied/211605/flist`)
+		let uri = this._extendBaseUrl(`/ica/rest/nami/zugeordnete-taetigkeiten/filtered-for-navigation/gruppierung-mitglied/mitglied/${memberId}/flist`)
 
 		return this._request({
 			method: 'GET',
