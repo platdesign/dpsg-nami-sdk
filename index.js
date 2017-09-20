@@ -189,6 +189,26 @@ module.exports = class NamiSDK {
 	}
 
 
+	/**
+	 * Request member details
+	 * @param  {Number} memberId
+	 * @return {Promise}          resolves with data from _request result
+	 */
+	async getMemberDetails(memberId, query) {
+
+		let uri = this._extendBaseUrl(`/ica/rest/nami/zugeordnete-taetigkeiten/filtered-for-navigation/gruppierung-mitglied/mitglied/211605/flist`)
+
+		return this._request({
+			method: 'GET',
+			uri,
+			qs: query || {
+				page: 1,
+				start: 0,
+				limit: 20
+			}
+		})
+		.then((res) => res.data);
+	}
 
 
 

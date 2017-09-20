@@ -185,6 +185,28 @@ describe('NamiClient', () => {
 				});
 			});
 
+
+			it('should get member-details', () => {
+
+				return client.getMemberDetails(clientConfig.userId)
+					.then(res => {
+
+						console.log(JSON.stringify(res, null, 2));
+
+						expect(res)
+							.to.be.an.object();
+
+						expect(res.success)
+							.to.be.a.boolean()
+							.to.equal(true);
+
+						expect(res.totalEntries)
+							.to.be.a.number();
+
+					});
+
+			});
+
 		});
 
 
